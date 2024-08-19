@@ -11,7 +11,7 @@ interface TypingAnimationProps {
 }
 
 export default function TypingAnimation({
-  text,
+  text = "typing-animation",
   duration = 200,
   className,
 }: TypingAnimationProps) {
@@ -31,13 +31,13 @@ export default function TypingAnimation({
     return () => {
       clearInterval(typingEffect);
     };
-  }, [duration, i]);
+  }, [duration, i, text]);
 
   return (
     <span
       className={cn(
         "font-display text-center font-bold leading-[5rem] tracking-[-0.02em] drop-shadow-sm",
-        className,
+        className
       )}
     >
       {displayedText ? displayedText : text}
