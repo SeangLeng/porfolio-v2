@@ -39,12 +39,12 @@ const ShinyButton = ({
       onClick={onClick}
       {...animationProps}
       className={cn(
-        "relative rounded-full px-10 py-3 font-medium border-primaryColor border  backdrop-blur-xl transition-[box-shadow] duration-300 ease-in-out hover:shadow dark:bg-[radial-gradient(circle_at_50%_0%,hsl(var(--white)/20%)_0%,transparent_60%)] dark:hover:shadow-[0_0_20px_hsl(var(--white)/30%)]",
+        "relative rounded-full px-10 py-3 font-medium border-primaryColor border backdrop-blur-lg transition-[box-shadow] duration-300 ease-in-out hover:shadow dark:bg-[radial-gradient(circle_at_50%_0%,hsl(var(--white)/20%)_0%,transparent_60%)] dark:hover:shadow-[0_0_20px_hsl(var(--white)/30%)]",
         className
       )}
     >
       <span
-        className="relative block h-full w-full text-sm uppercase tracking-wide text-white dark:font-light dark:text-[rgb(255,255,255,90%)]"
+        className="relative block h-full w-full text-sm uppercase tracking-wide dark:font-light"
         style={{
           maskImage:
             "linear-gradient(-75deg,hsl(var(--white)) calc(var(--x) + 20%),transparent 30%),hsl(var(--white)) 100%))",

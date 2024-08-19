@@ -114,8 +114,8 @@ export function VelocityScroll({
       <ParallaxText baseVelocity={-default_velocity} className={className}>
         {text}
       </ParallaxText>
-      <div className="bg-gradient-to-r from-foreground/90 w-full h-full absolute top-0"></div>
-      <div className="bg-gradient-to-l from-foreground/90 w-full h-full absolute top-0"></div>
+      <div className="bg-gradient-to-r from-foreground/80 w-full h-full absolute top-0"></div>
+      <div className="bg-gradient-to-l from-foreground/80 w-full h-full absolute top-0"></div>
     </section>
   );
 }

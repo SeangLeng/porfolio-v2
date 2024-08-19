@@ -3,6 +3,7 @@ import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import DotPattern from "@/components/magicui/dot-pattern";
+import Footer from "@/components/footer/Footer";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -39,7 +40,10 @@ export default function RootLayout({
             )}
           />
         </aside>
-        <main className="z-10 text-white relative">{children}</main>
+        <main className="z-10 text-white relative">
+          {children}
+          <Footer />
+        </main>
       </body>
     </html>
   );

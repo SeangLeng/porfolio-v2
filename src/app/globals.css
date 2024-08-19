@@ -81,4 +81,31 @@
   h1 {
     @apply lg:text-5xl md:text-4xl text-2xl;
   }
+
+  h2 {
+    @apply lg:text-4xl md:text-3xl text-xl;
+  }
+
+  h3 {
+    @apply lg:text-3xl md:text-2xl text-lg;
+  }
+}
+
+.lightShadowText {
+  animation: lightShadow 4s infinite;
+}
+
+@keyframes lightShadow {
+  0% {
+    text-shadow: 0px 0px 5px var(--primaryColor);
+  }
+
+  50% {
+    text-shadow: 0px 0px 15px var(--primaryColor);
+
+  }
+
+  100% {
+    text-shadow: 0px 0px 0px var(--primaryColor);
+  }
 }
