@@ -34,6 +34,7 @@ export default function ImageCard({
             ? "top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
             : "bottom-3 right-3"
         }`}
+        asChild
       >
         <Link href={link} className="flex gap-5 items-center">
           Detail

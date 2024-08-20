@@ -12,6 +12,7 @@ import ImageCard from "@/components/cards/ImageCard";
 import { AllProjects } from "../constrains/MockupProjects";
 import Link from "next/link";
 import { Mail, PhoneCall, Telescope } from "lucide-react";
+import { Skills } from "../constrains/Skills";
 
 export default function Homepage({ changeTab }: { changeTab: any }) {
   const router = useRouter();
@@ -22,7 +23,7 @@ export default function Homepage({ changeTab }: { changeTab: any }) {
   return (
     <section>
       <section className="my-10 container">
-        <h1 className="text-center font-bold uppercase leading-relaxed">
+        <h1 className="text-center font-bold uppercase">
           Crafting Innovative & User-Centric Web Experiences with{" "}
           <span className="text-primaryColor">
             <TypingAnimation text="JENZY" />
@@ -43,7 +44,7 @@ export default function Homepage({ changeTab }: { changeTab: any }) {
         <section className="grid lg:grid-cols-5 my-10 justify-center items-center">
           <div className="bg-gradient-to-r from-[#FFFFFF] to-[#00E7E7] p-1 rounded-xl lg:col-span-2 w-full">
             <div className="bg-foreground w-full h-full rounded-lg p-6">
-              <div className="grid grid-cols-3 gap-5">
+              <div className="grid sm:grid-cols-3 gap-5">
                 <div className="flex flex-col gap-1 justify-center items-center">
                   <p>
                     <NumberTicker
@@ -78,14 +79,14 @@ export default function Homepage({ changeTab }: { changeTab: any }) {
       </section>
       <section aria-label="skills in VelocityScroll" className="my-20">
         <VelocityScroll
-          text="uxui/designer developer next app astro "
+          text={Skills.join(" ")}
           default_velocity={1}
           className="font-display italic uppercase text-center text-4xl font-bold tracking-[-0.02em] text-white drop-shadow-sm dark:text-white md:text-7xl md:leading-[5rem]"
         />
       </section>
       <section aria-label="projects" className="container">
-        <section className="grid sm:grid-cols-4 gap-3 items-center">
-          <div className="col-span-3">
+        <section className="grid grid-cols-4 gap-3 items-center">
+          <div className="md:col-span-3 col-span-4">
             <h2 className="uppercase font-bold text-primaryColor">
               the lasted project
             </h2>
@@ -95,12 +96,10 @@ export default function Homepage({ changeTab }: { changeTab: any }) {
               captivate and convert.
             </article>
           </div>
-          <div className="cols-span-1 flex justify-end">
+          <div className="md:cols-span-1 col-span-4 flex justify-end">
             <ShimmerButton
               onClick={() => {
-                if (typeof changeTab === "function") {
-                  changeTab("projects");
-                }
+                router.push("/pages/projects");
               }}
             >
               All projects
@@ -164,7 +163,7 @@ export default function Homepage({ changeTab }: { changeTab: any }) {
       </section>
       <section className="container my-10" id="contact">
         <ShinyButton text="GET IN TOUCH!" className="tracking-wider" />
-        <section className="grid md:grid-cols-2 my-20">
+        <section className="grid md:grid-cols-2 my-20 gap-5">
           <div className="flex flex-col gap-3">
             <p className="text-5xl font-bold">
               Interesting to in{" "}
@@ -177,7 +176,7 @@ export default function Homepage({ changeTab }: { changeTab: any }) {
               Showcasing Diverse Expertise and Innovative Solutions
             </p>
           </div>
-          <div className="w-1/2 mx-auto">
+          <div className="md:w-1/2 w-full mx-auto">
             <div className="flex flex-col gap-5">
               <Link
                 href={"/"}

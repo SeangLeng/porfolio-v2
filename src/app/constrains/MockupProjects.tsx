@@ -1,5 +1,7 @@
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
-import sampleProjectImage from '@/asset/images/11c29c0ccc53858cbad8ca2e1e99e7c5.png';
+import galcorp from "@/asset/images/galcorp.png";
+import taskdot from "@/asset/images/taskdot.png";
+import Quicksight from "@/asset/images/Quicksight.jpg";
 
 interface ProjectProps {
   title: string;
@@ -9,33 +11,18 @@ interface ProjectProps {
 
 export const AllProjects: ProjectProps[] = [
   {
-    title: "sample project",
-    link: "sample link",
-    images: sampleProjectImage
+    title: "Galcorps",
+    link: "https://www.gal-corp.com/",
+    images: galcorp,
   },
   {
-    title: "sample project",
-    link: "sample link",
-    images: sampleProjectImage
+    title: "taskdot",
+    link: "https://www.craftysite.co/en",
+    images: taskdot,
   },
   {
-    title: "sample project",
-    link: "sample link",
-    images: sampleProjectImage
-  },
-  {
-    title: "sample project",
-    link: "sample link",
-    images: sampleProjectImage
-  },
-  {
-    title: "sample project",
-    link: "sample link",
-    images: sampleProjectImage
-  },
-  {
-    title: "sample project",
-    link: "sample link",
-    images: sampleProjectImage
+    title: "K-Quicksight",
+    link: "https://k-quicksight.istad.co/about-us",
+    images: Quicksight,
   },
 ];
