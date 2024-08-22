@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import DotPattern from "@/components/magicui/dot-pattern";
 import Footer from "@/components/footer/Footer";
+import Head from "next/head";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -40,11 +41,8 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  manifest: "https://nextjs.org/manifest.json",
   verification: {
     google: "google",
-    yandex: "yandex",
-    yahoo: "yahoo",
     other: {
       me: ["mr.lengseng@gmail.com"],
     },
@@ -58,6 +56,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <meta
+          name="google-site-verification"
+          content="AFGzcKWfUIi-_4W7o5IX47AlGs9xGjXmgyi1Q_HXQ7o"
+        />
+      </Head>
       <body
         className={cn(
           "min-h-screen bg-foreground font-sans antialiased relative",
