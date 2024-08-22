@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "google",
+    google: "AFGzcKWfUIi-_4W7o5IX47AlGs9xGjXmgyi1Q_HXQ7o",
     other: {
       me: ["mr.lengseng@gmail.com"],
     },
@@ -56,12 +56,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        <meta
-          name="google-site-verification"
-          content="AFGzcKWfUIi-_4W7o5IX47AlGs9xGjXmgyi1Q_HXQ7o"
-        />
-      </Head>
       <body
         className={cn(
           "min-h-screen bg-foreground font-sans antialiased relative",
